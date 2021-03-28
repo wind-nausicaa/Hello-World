@@ -30,3 +30,14 @@ class Solution:
             j = my_dict.get(target - num)
             if j is not None and j != ind:
                 return [ind, j]
+时间复杂度：O(2n)
+解法三（边建dict边查找）：
+class Solution:
+    def twoSum(self, nums:List[int], target:int) -> List[int]:
+        my_dict = {}
+        for index, num in enumerate(nums):
+            j = my_dict.get(target - num)
+            if j is not None:
+                return [index, j]
+            my_dict[num] = index
+时间复杂度：O(n)

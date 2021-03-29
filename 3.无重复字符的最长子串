@@ -1,0 +1,23 @@
+给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。
+示例
+输入: s = "abcabcbb"
+输出: 3 
+解释: 因为无重复字符的最长子串是 "abc"，所以其长度为 3。
+解答：
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        my_set = set()
+        start = 0
+        cur_len = 0
+        max_len = 0
+        len_s = len(s)
+        for i in range(len_s):
+            cur_len += 1
+            while s[i] in my_set:
+                cur_len -= 1
+                my_set.remove(s[start])
+                start += 1
+            my_set.add(s[i])
+            max_len = cur_len if cur_len > max_len else max_len
+        return max_len
+时间复杂度：O(n)

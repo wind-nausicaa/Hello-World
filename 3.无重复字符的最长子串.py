@@ -33,6 +33,6 @@ class Solution():
                 max_len = i - start + 1
                 max_start = start
             my_dict[s[i]] = i
-        return ans
+        return max_len
         # 返回不重复的最长子串
-        # return s[max_start:max_start + ans]
+        # return s[max_start:max_start + max_len]

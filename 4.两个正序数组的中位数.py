@@ -20,16 +20,16 @@
 # 链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays
 # 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 # 方法一：组合两个数组，调用sort函数排序后输出
+"""
+拓展sort()方法和sorted()方法：https://zhuanlan.zhihu.com/p/106009216
+sort()方法为list类型自建方法，不能用于其他数据类型，直接改变原list，用法：list.sort()
+sorted()可用于任意可迭代对象，包括字符串，用法：sorted(str)，返回一个list类型，sorted(type, key = None, reverse = False)
+"""
 class Solution():
-    def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
+    def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]):
         ans = nums1 + nums2
         ans.sort()
         if len(ans) % 2 == 0:
             return float((ans[int(len(ans) / 2) - 1] + ans[int(len(ans) / 2)]) / 2)
         else:
             return float(ans[int(len(ans) / 2)])
-"""
-拓展sort()方法和sorted()方法：https://zhuanlan.zhihu.com/p/106009216
-sort()方法为list类型自建方法，不能用于其他数据类型，直接改变原list，用法：list.sort()
-sorted()可用于任意可迭代对象，包括字符串，用法：sorted(str)，返回一个list类型，sorted(type, key = None, reverse = False)
-"""

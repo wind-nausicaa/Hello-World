@@ -8,7 +8,7 @@
 # 输出：[7,0,8]
 # 解释：342 + 465 = 807.
 # 这里采用大佬的解法：
-class Solution:
+class Solution():
     def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
         head = ListNode(l1.val + l2.val)
         cur = head

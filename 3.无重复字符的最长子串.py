@@ -4,7 +4,7 @@
 # 输出: 3 
 # 解释: 因为无重复字符的最长子串是 "abc"，所以其长度为 3。
 # 解答一：
-class Solution:
+class Solution():
     def lengthOfLongestSubstring(self, s: str) -> int:
         my_set = set()
         start = 0
@@ -22,7 +22,7 @@ class Solution:
         return max_len
 # 时间复杂度：O(n)
 # 另一种解法（改用字典，同样有去重的作用）：
-class Solution:
+class Solution():
     def lengthOfLongestSubstring(self, s: str) -> int:
         start = 0; max_len = 0; max_start = 0
         my_dict = {}

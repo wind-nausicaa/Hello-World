@@ -12,7 +12,7 @@
 # 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
 # 解法一(list两层for循环)：
-class Solution:
+class Solution():
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         for i in range(len(nums)):
             for j in range(i+1,len(nums)):
@@ -21,7 +21,7 @@ class Solution:
         return [-1, -1]
 # 时间复杂度：O(n2)
 # 解法二（利用dict缩短查找时间）：
-class Solution:
+class Solution():
     def twoSum(self, nums:List[int], target:int) -> List[int]:
         my_dict={}
         for ind, num in enumerate(nums):
@@ -32,7 +32,7 @@ class Solution:
                 return [ind, j]
 # 时间复杂度：O(2n)
 # 解法三（边建dict边查找）：
-class Solution:
+class Solution():
     def twoSum(self, nums:List[int], target:int) -> List[int]:
         my_dict = {}
         for index, num in enumerate(nums):

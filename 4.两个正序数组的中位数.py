@@ -29,6 +29,7 @@ class Solution():
         else:
             return float(ans[int(len(ans) / 2)])
 """
-拓展sort()方法和sorted()方法：
-sort()方法为
+拓展sort()方法和sorted()方法：https://zhuanlan.zhihu.com/p/106009216
+sort()方法为list类型自建方法，不能用于其他数据类型，直接改变原list，用法：list.sort()
+sorted()可用于任意可迭代对象，包括字符串，用法：sorted(str)，返回一个list类型，sorted(type, key = None, reverse = False)
 """

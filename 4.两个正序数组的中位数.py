@@ -33,6 +33,7 @@ class Solution():
             return float((ans[int(len(ans) / 2) - 1] + ans[int(len(ans) / 2)]) / 2)
         else:
             return float(ans[int(len(ans) / 2)])
+        
 # 方法二：时间复杂度为O(log(m+n))
 class Solution():
     def findMedianSortedArrays(self, nums1, nums2):
